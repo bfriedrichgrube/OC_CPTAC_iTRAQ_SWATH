@@ -120,3 +120,31 @@ rownames(SWATH_filtered) <- mapping_table$To
 save(data_protein_abund, mean_abund, data_protein_sorted, SWATH_missing, a, b, c, d, e, f, g, h, i, j, file='CPTAC_protein_filter_continuous.Rdata')
 save(SWATH_filtered, file='CPTAC_protein_level_filtered.Rdata')
 
+##Step 8: Imputing missing values
+# similar to Perseus software, a normal distribution of random values at the left end of the measured value-distribution will be created
+mean(SWATH_filtered, na.rm=T)
+[1] -0.1921363
+sd(SWATH_filtered, na.rm=T)
+[1] 0.5570528
+count_missing <- length(which(is.na(SWATH_filtered)))
+count_missing
+[1] 21914
+
+new_mean <- mean(SWATH_filtered, na.rm=T)*9
+new_sd <- sd(SWATH_filtered, na.rm=T)*0.48
+set.seed(0)
+background <- rnorm(count_missing, mean=new_mean, sd=new_sd)
+
+#plot in order to check where random distribution lays
+data_hist <- hist(SWATH_filtered)
+back_hist <- hist(background)
+plot(data_hist, xlim=c(-8,8), col='lightblue', main='Distribution of data and distribution of background', xlab='log2 intensities')
+plot(back_hist, xlim=c(-8,8), col='red', main='Distribution of data and distribution of background', xlab='log2 intensities', add=T)
+SWATH_imputed <- SWATH_filtered
+length(which(is.na(SWATH_imputed)))
+[1] 21914
+SWATH_imputed[which(is.na(SWATH_imputed))]<-background
+length(which(is.na(SWATH_imputed)))
+[1] 0
+
+save(SWATH_imputed, file='CPTAC_SWATH_imputed.Rdata')
