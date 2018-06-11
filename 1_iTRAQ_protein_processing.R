@@ -46,4 +46,4 @@ dim(DDA_missing0)
 
 ## Step 6: Save output
 
-save(DDA_missing0, file='CPTAC_DDA_protein_level_CDAP.Rdata')
+save(DDA, DDA_missing0, file='CPTAC_DDA_protein_level_CDAP.Rdata')
