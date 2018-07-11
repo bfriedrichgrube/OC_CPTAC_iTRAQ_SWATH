@@ -23,6 +23,9 @@ class(SWATH_overlap)
 class(DDA_overlap)
 DDA_overlap <- as.matrix(DDA_overlap)
 
+save(SWATH_overlap, file='CPTAC_SWATH_overlap.Rdata')
+save(DDA_overlap, file='CPTAC_DDA_overlap.Rdata')
+
 ## Step 3: Calculate corrleation
 
 swath.dda.overlap.corr <- sapply(seq_len(nrow(DDA_overlap)), function(i)
