@@ -1,4 +1,4 @@
-## Mclust classification algorithm (For Figure 3, S2, S3)
+## Mclust classification algorithm (For Figure 3, S2)
 
 ## Step 1: Prepare R session
 
@@ -119,6 +119,8 @@ rownames(classification_result) <- classification_result[,1]
 classification_result <- classification_result[sort(rownames(classification_result)),]
 head(classification_result)
 
+save(DDA_overlap, DDA_missing0, DDA_z, CPTAC_DDA_cluster_final, file='DDA_classification_workflow_20171101.Rdata')
+save(SWATH_overlap, SWATH_z, SWATH_imputed, SWATH_filtered, CPTAC_SWATH_cluster_final,  file='SWATH_classification_workflow_20171101.Rdata')
 save(classification_result, file='classification_result_20171101.Rdata')
 
 #ARI of results from common proteins
@@ -180,9 +182,10 @@ all(rownames(clinical_DDA)==colnames(DDA_overlap))
 clinical_DDA_anno <- new('AnnotatedDataFrame', data=clinical_DDA)
 CPTAC_DDA_Set <- new('MSnSet', exprs=DDA_overlap, phenoData=clinical_DDA_anno)
 
-# Achtung previous results were overwitten save(DDA_overlap, DDA_missing0, DDA_z, CPTAC_DDA_cluster_final, file='DDA_classification_workflow_20171027.Rdata')
-save(DDA_overlap, DDA_missing0, DDA_z, CPTAC_DDA_cluster_final, file='DDA_classification_workflow_20171101.Rdata')
-save(SWATH_overlap, SWATH_z, SWATH_imputed, SWATH_filtered, CPTAC_SWATH_cluster_final,  file='SWATH_classification_workflow_20171101.Rdata')
-save(clinical_DDA, clinical_SWATH, file='clinical_annotation_tables_20161101.Rdata')
-q()
+
+save(CPTAC_SWATH_Set, file='CPTAC_SWATH_final_Set_20171101.Rdata')
+save(CPTAC_DDA_Set, file='CPTAC_DDA_final_Set_20171101.Rdata')
+
+#save(clinical_DDA, clinical_SWATH, file='clinical_annotation_tables_20161101.Rdata')
+
 
