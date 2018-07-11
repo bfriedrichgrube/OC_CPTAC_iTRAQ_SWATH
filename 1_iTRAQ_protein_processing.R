@@ -3,7 +3,6 @@
 ## Step 1: Prepare R session ##
 
 sessionInfo()
-
 setwd('')
 
 ## Step 2: Load in data ##
