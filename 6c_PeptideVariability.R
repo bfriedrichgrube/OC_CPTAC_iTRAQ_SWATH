@@ -181,6 +181,7 @@ dim(DDA_mean)
 DDA_sd <- aggregate(DDA_unlog, by=list(DDA_overlap$Protein), FUN=sd,  na.rm=T)
 DDA_CV <- as.matrix(DDA_sd[,2:104])/as.matrix(DDA_mean[,2:104])
 
+#plot Figure 2C
 pdf('peptide_per_protein_CVs_20180314.pdf', height=10, width=10)
 par(cex.axis=2.5, las=1)
 vioplot(as.numeric(na.omit(DDA_CV)), as.numeric(na.omit(SWATH_CV)), col='grey', names=c('', ''))
