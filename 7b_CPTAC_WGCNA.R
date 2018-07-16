@@ -1,4 +1,4 @@
-## WGCNA analysis of functionaly modules 
+## WGCNA analysis of functionaly modules (Figure S3)
 
 ## Step 1: Prepare R session 
 library(MSnbase)
@@ -17,8 +17,8 @@ enableWGCNAThreads()
 
 ## Step 2: Load in Data
 
-load('CPTAC_SWATH_final_Set_20171101.Rdata')
-load('CPTAC_DDA_final_Set_20171101.Rdata')
+load('CPTAC_SWATH_Set.Rdata')
+load('CPTAC_DDA_Set.Rdata')
 
 ## Step 3: WGCNA of SWATH data
 
@@ -229,7 +229,7 @@ pdf(file='cluster_enrichmentGO_SWATH_20171101.pdf', height=10, width=10)
 plot(zz, colorBy='qvalue')
 dev.off()
 
-save(clustEG, file='CPTAC_SWATH_WGCNA_20171101.Rdata')
+save(clustEG, file='CPTAC_SWATH_WGCNA.Rdata')
 
 ## Step 4: WGCNA analysis of iTRAQ DDA
 powers =1:20
@@ -440,5 +440,5 @@ pdf(file='cluster_enrichmentGO_DDA_20171101.pdf', height=10, width=10)
 plot(zz, colorBy='qvalue')
 dev.off()
                   
-save(clustEG, file='CPTAC_DDA_WGCNA_20171101.Rdata')
+save(clustEG, file='CPTAC_DDA_WGCNA.Rdata')
 
