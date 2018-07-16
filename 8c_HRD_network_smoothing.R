@@ -1,4 +1,4 @@
-## Network smoothing algorithm (Figure 6B)
+## Network smoothing algorithm (Figure 7B)
 
 ## Step 1: Prepare R session 
 
