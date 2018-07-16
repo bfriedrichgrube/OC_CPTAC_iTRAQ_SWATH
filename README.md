@@ -30,10 +30,10 @@ D) Analyze SWATH data and iTRAQ data for technical details like peptide and prot
             CPTAC_SWATH_peptide_level.Rdata (data_pepratio)
             PSM files from CPTAC data portal
     OUTPUT: Figure S1A and B
-            Figure 2A
+            Figure 2A-C
             CPTAC_SWATH_overlap.Rdata contains matrix with common proteins SWATH_overlap
             CPTAC_DDA_overlap.Rdata contains matrix with common proteins DDA_overlap
-            Figure 2C
+            
             
 E) Comparison of molecular subtype classification
     SCRIPT: 7a_CPTAC_Classification.R 7b_CPTAC_WGCNA.R 7c_CPTAC_heatmap.R
