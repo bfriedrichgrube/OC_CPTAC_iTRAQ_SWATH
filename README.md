@@ -9,7 +9,7 @@ A) Processing of CPTAC iTRAQ DDA data downloaded from CPTAC data portal to a com
     OUTPUT: CPTAC_DDA_protein_level_CDAP.Rdata containing DDA and DDA_missing0
     
 B) Processing the output from the described OpenSWATH, pyProphet, TRIC pipeline with SWATH2stats and mapDIA for protein inference
-    SCRIPT: 2_SWATH_preprocessing.R 3_SWATH_norm_batch.R 4_mapDIA_parameters.txt
+    SCRIPT: 2_SWATH_preprocessing.R 3_SWATH_norm_batch.R 4_mapDIA_parameter
     INPUT:  feature_alignment.tsv can be downloaded from ProteomeXchange
     OUTPUT: fragments_for_protein_quantification.txt
     
