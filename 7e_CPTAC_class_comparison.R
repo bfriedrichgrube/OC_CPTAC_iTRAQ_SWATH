@@ -1,5 +1,102 @@
 ## Make group comparisons based on original  CPTAC classification ##
 ## Mesechymal to others should show significantly higher overlap in proteins regulated than other groups## 
+## Step 1: Prepare R session 
+
+library(VennDiagram)
+setwd('Documents/Biomarker_Cancer/Ovarian_JohnHopkins/2017_10_Paper/CPTAC_Classification/')
+load('CPTAC_DDA_WGCNA_20171101.Rdata') ## load protein modules from WGCNA of DDA -> clustEG red corresponds to ECM organization
+load('../SWATH_iTRAQ_correlation.Rdata') ## load corrlations vector b corresponds to the ordered correlations of SWATH to iTRAQ ratios
+
+#extract mesenchymal proteins
+
+summary(clustEG)
+        Length Class  Mode     
+black    49    -none- character
+brown   135    -none- character
+grey    596    -none- character
+magenta 164    -none- character
+purple  336    -none- character
+red     283    -none- character
+tan      29    -none- character
+
+DDA_mes <- clustEG$red
+
+load('CPTAC_SWATH_WGCNA_20171101.Rdata') ## load protein modules from WGCNA of SWATH -> clustEG black corresponds to ECM organization
+
+#extract mesenchymal proteins
+
+summary(clustEG)
+          Length Class  Mode     
+black       86   -none- character
+green       42   -none- character
+grey       360   -none- character
+red         41   -none- character
+turquoise 1063   -none- character
+
+SWATH_mes <- clustEG$black
+
+
+## Step 2: Check common proteins in clusters
+
+a <- intersect(names(DDA_mes), names(SWATH_mes))
+
+length(a)
+[1] 84
+
+## 84 proteins are in common in both ECM organization modules
+
+
+## plot overlap
+pdf('venn_mesenchymal.pdf', width=10, height=10)
+draw.pairwise.venn(283, 86, 84, category=c('DDA', 'SWATH'), lty=rep('blank', 2), fill=c('lightblue', 'green'), cat.pos=c(-25,100), cex=3, cat.cex=3,margin=0.05)
+dev.off()
+
+## Step 3: Check correlation of common proteins in mesechymal protein module
+
+#shorten names of vector b (correlations of all proteins in common)
+x <- names(b)
+head(x)
+[1] "OSBPL8.rho"   "HERC2.rho"    "RABGGTA.rho"  "MDN1.rho"     "HLA-DRB1.rho"
+[6] "SPECC1L.rho" 
+
+y <- unlist(strsplit(x, '.rho', fixed=T))
+head(y)
+[1] "OSBPL8"   "HERC2"    "RABGGTA"  "MDN1"     "HLA-DRB1" "SPECC1L" 
+
+names(b)<- y
+head(b)
+      OSBPL8        HERC2      RABGGTA         MDN1     HLA-DRB1      SPECC1L 
+-0.036627422 -0.030389228 -0.029236041 -0.019801871 -0.019648113  0.000582085 
+
+#extract just common proteins from correlations
+c <- b[a]
+length(c)
+[1] 84
+head(c)
+     FHL2     PLOD1     THBS1     PTGIS    EFEMP1    PDLIM7 
+0.7924812 0.7427075 0.7618064 0.8191473 0.8448908 0.7969512 
+
+#order
+d<- c[order(c)]
+
+median(d)
+[1] 0.794826
+mean(d)
+[1] 0.7826912
+
+#plot corrleation
+pdf('Correlation_Mesenchymal_20180227.pdf', width=10, height=10)
+par(cex.axis=2.5, las=1)
+plot(d, xlab='', ylab='', xaxt='n')
+points(x=42.5, y=median(d), col='red', pch=16, cex=2)
+text(x=20, y=0.8, 'median=0.79', cex=3, col='red')
+axis(1, padj=0.3)
+dev.off()
+
+
+## Step 4: Save relevant information
+
+save(a, d, file='CPTAC_common_proteins_mesenchymal_20180312.Rdata')
 
 
 ## Step 1: Prepare R session 
