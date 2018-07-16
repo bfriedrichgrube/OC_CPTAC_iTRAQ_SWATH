@@ -1,4 +1,4 @@
-## Classification stability ## 
+## Classification stability (Figure 4 A-D) ## 
 ## Samples stability will be performed on same set of proteins as in the standard analysis (DDA_z, SWATH_z)
 ## Protein stability will start with all possible proteins (DDA_missing0, SWATH_imputed)
 p-value <0.05 -> *
@@ -12,19 +12,25 @@ p-value <0.0001 -> ****
 
 ## Step 1: Prepare R session ## 
 
-setwd('Documents/Biomarker_Cancer/Ovarian_JohnHopkins/2017_10_Paper/CPTAC_Classification/CPTAC_stability/')
+setwd('')
 library(mclust)
 library(ggplot2)
 
 ## Step 2: Load data ##
 
-load('../SWATH_classification_workflow_20171101.Rdata')
-load('../classification_result.Rdata')
+load('SWATH_classification_workflow.Rdata')
+load('classification_result.Rdata')
+load('DDA_classification_workflow.Rdata')
+load('CPTAC_DDA_protein_level_CDAP.Rdata')
+load('CPTAC_SWATH_imputed.Rdata')
 
 SWATH_class <- classification_result[,7]
 names(SWATH_class) <- classification_result[,2]
 SWATH_class <- SWATH_class[order(names(SWATH_class))]
 
+DDA_class <- classification_result[,6]
+names(DDA_class) <- rownames(classification_result)
+colnames(DDA_z) <- rownames(classification_result)
 
 ## Step 3: Stability analysis on samples of SWATH
 
@@ -244,20 +250,10 @@ theme(axis.text.x=element_text(colour='black', size=35), axis.text.y=element_tex
 dev.off()
 
 
-save(ARI_90, ARI_80, ARI_70, ARI_60, ARI_50, plot_SWATH_samples, file='CPTAC_SWATH_stability_samples_20171113.Rdata')
-save(ARI_50protein, ARI_60protein, ARI_70protein, ARI_80protein, ARI_90protein, plot_SWATH_proteins, SWATH_z_all, SWATH_class, file='CPTAC_SWATH_stability_proteins_20171113.Rdata')
+save(ARI_90, ARI_80, ARI_70, ARI_60, ARI_50, plot_SWATH_samples, file='CPTAC_SWATH_stability_samples.Rdata')
+save(ARI_50protein, ARI_60protein, ARI_70protein, ARI_80protein, ARI_90protein, plot_SWATH_proteins, SWATH_z_all, SWATH_class, file='CPTAC_SWATH_stability_proteins.Rdata')
 
-## Step 2: Load data ##
-
-load('../DDA_classification_workflow_20171101.Rdata')
-# load('../SWATH_classification_workflow_20171101.Rdata')
-load('../classification_result.Rdata')
-
-DDA_class <- classification_result[,6]
-names(DDA_class) <- rownames(classification_result)
-colnames(DDA_z) <- rownames(classification_result)
-
-## Step 3: Stability analysis on samples
+## Step 6: Stability analysis on samples of DDA
 
 #90% 
 ARI_90 <- NULL
@@ -334,7 +330,7 @@ tmp_ARI <- adjustedRandIndex(tmp_class, tmp_original)
 ARI_50 <- c(ARI_50, tmp_ARI)
 }
 
-## Step 4: Stability analysis on proteins
+## Step 7: Stability analysis on proteins of DDA
 
 # Prepare z scores of proteins without missing values
 DDA_z_all <- as.matrix(DDA_missing0[4:4366,])
@@ -439,7 +435,7 @@ tmp_ARI <- adjustedRandIndex(tmp_class, DDA_class)
 ARI_30protein <- c(ARI_30protein, tmp_ARI)
 }
 
-## Step 5: Plot
+## Step 8: Plot for DDA
 
 plot_DDA_samples <- data.frame(ARI=c(ARI_90, ARI_80, ARI_70, ARI_60, ARI_50), Percentage=c(rep("90%",100), rep("80%", 100), rep("70%", 100), rep("60%", 100), rep("50%",100)))
 plot_DDA_samples$Percentage<- factor(plot_DDA_samples$Percentage, levels=rev(levels(plot_DDA_samples$Percentage)), ordered=T)
@@ -465,17 +461,6 @@ sig5 <- data.frame(a=c(4,4:5,5), b=c(0.93, 0.95, 0.95, 0.93))
 pdf('boxplot_stability_samples.pdf', height=10, width=10)
 d+geom_boxplot()+theme_bw()+scale_y_continuous(limits=c(0,1.25))+
 labs(title="Sub-sampling of 103 samples of the iTRAQ DDA analysis")+
-geom_line(data=sig1, aes(x=a, y=b))+annotate("text", x=3, y=1.21, label="****", size=10)+
-geom_line(data=sig2, aes(x=a, y=b))+annotate("text", x=1.5, y=1.15, label="*", size=10)+
-geom_line(data=sig3, aes(x=a, y=b))+annotate("text", x=2.5, y=1.09, label="**", size=10)+
-geom_line(data=sig4, aes(x=a, y=b))+annotate("text", x=3.5, y=1.03, label="**", size=10)+
-geom_line(data=sig5, aes(x=a, y=b))+annotate("text", x=4.5, y=0.97, label="*", size=10)+
-theme(axis.text.x=element_text(size=20), axis.text.y=element_text(size=20), axis.title=element_text(size=22), plot.title=element_text(size=24))
-dev.off()
-
-pdf('boxplot_stability_samples_20180206.pdf', height=10, width=10)
-d+geom_boxplot()+theme_bw()+scale_y_continuous(limits=c(0,1.25))+
-labs(title="Sub-sampling of 103 samples of the iTRAQ DDA analysis")+
 geom_line(data=sig1, aes(x=a, y=b))+annotate("text", x=3, y=1.2, label="****", size=20)+
 geom_line(data=sig2, aes(x=a, y=b))+annotate("text", x=1.5, y=1.14, label="*", size=20)+
 geom_line(data=sig3, aes(x=a, y=b))+annotate("text", x=2.5, y=1.08, label="**", size=20)+
@@ -483,10 +468,6 @@ geom_line(data=sig4, aes(x=a, y=b))+annotate("text", x=3.5, y=1.02, label="**", 
 geom_line(data=sig5, aes(x=a, y=b))+annotate("text", x=4.5, y=0.96, label="*", size=20)+
 theme(axis.text.x=element_text(colour='black', size=35), axis.text.y=element_text(colour='black', size=35), axis.title=element_text(size=0), plot.title=element_text(size=0))
 dev.off()
-
-
-
-
 
 plot_DDA_proteins <- data.frame(ARI=c(ARI_90protein, ARI_80protein, ARI_70protein, ARI_60protein, ARI_50protein, ARI_40protein, ARI_30protein),
 Percentage=c(rep("90%",100), rep("80%", 100), rep("70%", 100), rep("60%", 100), rep("50%",100), rep("40%", 100), rep("30%", 100)))
@@ -511,29 +492,18 @@ t.test(ARI_40protein, ARI_30protein)$p.value
 e <- ggplot(plot_DDA_proteins, aes(Percentage, ARI))
 sig6 <- data.frame(a=c(1,1:2,2,2:3,3,3:4,4,4:5,5,5:6,6,6:7,7), b=c(1.01, 1.03, 1.03, 1.01, 1.03, 1.03, 1.01, 1.03, 1.03, 1.01, 1.03, 1.03, 1.01, 1.03, 1.03, 1.01, 1.03, 1.03, 1.01))
 
-pdf('boxplot_stability_proteins_20180206.pdf', height=10, width=10) 
+pdf('boxplot_stability_proteins.pdf', height=10, width=10) 
 e+geom_boxplot()+theme_bw()+scale_y_continuous(limits=c(0,1.25))+
 labs(title="Sub-sampling of 4363 proteins of the iTRAQ DDA analysis")+
 geom_line(data=sig6, aes(x=a, y=b))+annotate("text", x=4, y=1.10, label="n.s.", size=17)+
 theme(axis.text.x=element_text(colour='black', size=35), axis.text.y=element_text(colour='black', size=35), axis.title=element_text(size=0), plot.title=element_text(size=0))
 dev.off()
 
-save(ARI_90, ARI_80, ARI_70, ARI_60, ARI_50, plot_DDA_samples, file='CPTAC_DDA_stability_samples_20171113.Rdata')
-save(ARI_30protein, ARI_40protein, ARI_50protein, ARI_60protein, ARI_70protein, ARI_80protein, ARI_90protein, plot_DDA_proteins, DDA_z_all, DDA_class,
-+ file='CPTAC_DDA_stability_proteins_20171113.Rdata')
+save(ARI_90, ARI_80, ARI_70, ARI_60, ARI_50, plot_DDA_samples, file='CPTAC_DDA_stability_samples.Rdata')
+save(ARI_30protein, ARI_40protein, ARI_50protein, ARI_60protein, ARI_70protein, ARI_80protein, ARI_90protein, plot_DDA_proteins, DDA_z_all, DDA_class, file='CPTAC_DDA_stability_proteins.Rdata')
 
 
-## Step 2: Load data ##
-
-load('../SWATH_classification_workflow_20171101.Rdata')
-load('../classification_result.Rdata')
-
-SWATH_class <- classification_result[,7]
-names(SWATH_class) <- classification_result[,2]
-SWATH_class <- SWATH_class[order(names(SWATH_class))]
-
-
-## Step 3: Stability analysis on samples
+## Step 9: Stability analysis on samples of Mesenchymal class for SWATH (Figure S2B)
 
 Fisher_90_mes <- NULL
 Fisher_90_other <- NULL
@@ -650,57 +620,18 @@ for (i in 1:100){
 	Fisher_50_other <- c(Fisher_50_other, tmp_fish_all[-which(tmp_fish_all==min(tmp_fish_all))])
 }
 
-
-plot_SWATH_other <- data.frame(p.value=c(Fisher_90_other_adj, Fisher_80_other_adj, Fisher_70_other_adj, Fisher_60_other_adj, Fisher_50_other_adj),Percentage=c(rep("90%",197), rep("80%", 190), rep("70%", 166), rep("60%", 147), rep("50%",113)))
-plot_SWATH_other$Percentage <- factor(plot_SWATH_other$Percentage, levels=rev(levels(plot_SWATH_other$Percentage)), ordered=T)
-d <- ggplot(plot_SWATH_other, aes(Percentage, p.value))
-
-
-
-pdf('boxplot_SWATH_otherclusters.pdf', height=10, width=10)
-d+geom_boxplot()+theme_bw()+scale_y_reverse()+geom_hline(aes(yintercept=0.01), colour="red", linetype="dashed")+labs(title="")
-dev.off()
-
-
-plot_SWATH_mes <- data.frame(p.value=c(Fisher_90_mes_adj, Fisher_80_mes_adj, Fisher_70_mes_adj, Fisher_60_mes_adj, Fisher_50_mes_adj),Percentage=c(rep("90%",100), rep("80%", 100), rep("70%", 100), rep("60%", 100), rep("50%",100)))
-plot_SWATH_mes$Percentage <- factor(plot_SWATH_mes$Percentage, levels=rev(levels(plot_SWATH_mes$Percentage)), ordered=T)
-
-e <- ggplot(plot_SWATH_mes, aes(Percentage, p.value))
-
-pdf('boxplot_SWATH_mesenchymalcluster.pdf', height=10, width=10)
-e+geom_boxplot()+theme_bw()+scale_y_reverse()+geom_hline(aes(yintercept=0.01), colour="red", linetype="dashed")+labs(title="")
-dev.off()
-
-
-
-
 values<-c(median(Fisher_90_mes_adj), median(Fisher_80_mes_adj), median(Fisher_70_mes_adj), median(Fisher_60_mes_adj), median(Fisher_50_mes_adj), 
 median(Fisher_90_other_adj), median(Fisher_80_other_adj), median(Fisher_70_other_adj), median(Fisher_60_other_adj), median(Fisher_50_other_adj))
-> length(values)
-[1] 10
-> Percentage <-c('90%', '80%', '70%', '60%', '50%', '90%', '80%', '70%', '60%', '50%')
-> length(Percentage)
-[1] 10
-> Group <- c(rep('Mesenchymal cluster', 5), rep('Other clusters', 5))
-> length(Group)
-[1] 10
-> plot_cluster <- data.frame(values, Percentage, Group)
-> head(plot_cluster)
-        values Percentage               Group
-1 7.044070e-18        90% Mesenchymal cluster
-2 6.581833e-14        80% Mesenchymal cluster
-3 4.274643e-11        70% Mesenchymal cluster
-4 3.267498e-07        60% Mesenchymal cluster
-5 1.871104e-02        50% Mesenchymal cluster
-6 6.382241e-04        90%      Other clusters
-f <- ggplot(plot_cluster, aes(Percentage, values))
-f+geom_point(aes(colour=factor(Group)))
-f+geom_point(aes(colour=factor(Group)))+scale_y_reverse()
-plot_cluster$Percentage <- factor(plot_cluster$Percentage, levels=rev(levels(plot_cluster$Percentage)), ordered=T)
-f <- ggplot(plot_cluster, aes(Percentage, values))
-f+geom_point(aes(colour=factor(Group)), size=4)+scale_y_reverse()+geom_hline(aes(yintercept=0.01), colour="red", linetype="dashed", size=2)+labs(title="")
 
-pdf('cluster_stability_20180221.pdf', height=10, width=10) > f+geom_point(aes(shape=factor(Group)), size=5)+scale_y_reverse()+geom_hline(aes(yintercept=0.01), colour="red", linetype="dashed", size=2)+labs(title="")+theme_bw()+theme(axis.text.x=element_text(colour='black', size=35), axis.text.y=element_text(colour='black', size=35), axis.title=element_text(size=0), plot.title=element_text(size=0), legend.position='none')
+Percentage <-c('90%', '80%', '70%', '60%', '50%', '90%', '80%', '70%', '60%', '50%')
+Group <- c(rep('Mesenchymal cluster', 5), rep('Other clusters', 5))
+length(Group)
+[1] 10
+plot_cluster <- data.frame(values, Percentage, Group)
+
+f <- ggplot(plot_cluster, aes(Percentage, values))
+pdf('cluster_stability.pdf', height=10, width=10)
+f+geom_point(aes(shape=factor(Group)), size=5)+scale_y_reverse()+geom_hline(aes(yintercept=0.01), colour="red", linetype="dashed", size=2)+labs(title="")+theme_bw()+theme(axis.text.x=element_text(colour='black', size=35), axis.text.y=element_text(colour='black', size=35), axis.title=element_text(size=0), plot.title=element_text(size=0), legend.position='none')
 dev.off()
 
 
