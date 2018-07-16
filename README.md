@@ -43,12 +43,28 @@ E) Comparison of molecular subtype classification
             CPTAC_SWATH_protein_level.Rdata (data_protein)
             classification_result_template.csv
             clinical_data.csv
+    OUTPUT: SWATH_classification_workflow.Rdata
+            DDA_classification_workflow.Rdata
+            classification_result.Rdata
+            Figure 3
+            Figure S2A
             
 F) Bootstrapping algorithm for classification stability and mesenchymal stability
     SCRIPT: 7d_CPTAC_stability.R 
+    INPUT:  classification_result.Rdata
+            CPTAC_DDA_protein_level_CDAP.Rdata
+            CPTAC_SWATH_imputed.Rdata
+            SWATH_classification_workflow.Rdata
+            DDA_classification_workflow.Rdata
+    OUTPUT: Figure 4A-D
+            Figure S2B
 
 G) Differential expression analysis of previously identified molecular subgroups
     SCRIPT: 7e_CPTAC_class_comparison.R
+    INPUT:  
+    OUTPUT:
     
 H) Analysis of HRD vs. non-HRD subgroups
     SCRIPT: 8_
+    INPUT:
+    OUTPUT:
