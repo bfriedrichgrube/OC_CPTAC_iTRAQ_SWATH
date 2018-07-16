@@ -1,0 +1,104 @@
+TCGA_name,sample_name1,mRNA_subgroup,CPTAC_subgroup,HRD_status
+TCGA-09-1664-01A-01,HRD_1,Data not available,Differentiated,HRD
+TCGA-13-1404-01A-01,non_HRD_2,Proliferative,Immunoreactive,non_HRD
+TCGA-13-1409-01A-01,non_HRD_3,Proliferative,Proliferative,non_HRD
+TCGA-13-1410-01A-01,non_HRD_4,Immunoreactive,Mesenchymal,non_HRD
+TCGA-13-1482-01A-01,HRD_5,Differentiated,Mesenchymal,HRD
+TCGA-13-1483-01A-01,HRD_6,Mesenchymal,Mesenchymal,HRD
+TCGA-13-1485-01A-02,non_HRD_7,Mesenchymal,Mesenchymal,non_HRD
+TCGA-13-1487-01A-01,non_HRD_8,Mesenchymal,Mesenchymal,non_HRD
+TCGA-13-1488-01A-01,HRD_9,Immunoreactive,Mesenchymal,HRD
+TCGA-13-1489-01A-01,HRD_10,Proliferative,Differentiated,HRD
+TCGA-13-1492-01A-01,HRD_11,Proliferative,Proliferative,HRD
+TCGA-13-1497-01A-01,HRD_12,Proliferative,Immunoreactive,HRD
+TCGA-13-1500-01A-01,non_HRD_13,Differentiated,Mesenchymal,non_HRD
+TCGA-13-1501-01A-01,HRD_14,Mesenchymal,Mesenchymal,HRD
+TCGA-13-1507-01A-01,non_HRD_15,Immunoreactive,Immunoreactive,non_HRD
+TCGA-13-1511-01A-01,non_HRD_16,Differentiated,Differentiated,non_HRD
+TCGA-13-2059-01A-02,non_HRD_17,Data not available,Differentiated,non_HRD
+TCGA-13-2060-01A-01,non_HRD_18,Immunoreactive,Immunoreactive,non_HRD
+TCGA-13-2061-01A-02,non_HRD_19,Data not available,Immunoreactive,non_HRD
+TCGA-13-2065-01A-02,non_HRD_20,Data not available,Immunoreactive,non_HRD
+TCGA-13-2066-01A-02,non_HRD_21,Data not available,Proliferative,non_HRD
+TCGA-23-1121-01A-01,non_HRD_22,Proliferative,Proliferative,non_HRD
+TCGA-23-1122-01A-01,HRD_23,Proliferative,Mesenchymal,HRD
+TCGA-24-1103-01A-01,HRD_24,Differentiated,Differentiated,HRD
+TCGA-24-1416-01A-01,non_HRD_25,Differentiated,Differentiated,non_HRD
+TCGA-24-1422-01A-01,non_HRD_26,Mesenchymal,Mesenchymal,non_HRD
+TCGA-24-1430-01A-01,non_HRD_27,Proliferative,Mesenchymal,non_HRD
+TCGA-24-1431-01A-01,non_HRD_28,Differentiated,Differentiated,non_HRD
+TCGA-24-1435-01A-01,HRD_29,Immunoreactive,Mesenchymal,HRD
+TCGA-24-1436-01A-01,non_HRD_30,Immunoreactive,Immunoreactive,non_HRD
+TCGA-24-1548-01A-01,non_HRD_31,Proliferative,Proliferative,non_HRD
+TCGA-24-1553-01A-01,HRD_32,Immunoreactive,Differentiated,HRD
+TCGA-24-1555-01A-01,HRD_33,Differentiated,Differentiated,HRD
+TCGA-24-1557-01A-01,HRD_34,Differentiated,Differentiated,HRD
+TCGA-24-1558-01A-01,non_HRD_35,Proliferative,Proliferative,non_HRD
+TCGA-24-1562-01A-01,HRD_36,Differentiated,Mesenchymal,HRD
+TCGA-24-1920-01A-01,non_HRD_37,Proliferative,Immunoreactive,non_HRD
+TCGA-24-1927-01A-01,non_HRD_38,Data not available,Immunoreactive,non_HRD
+TCGA-24-2024-01A-02,HRD_39,Differentiated,Differentiated,HRD
+TCGA-24-2030-01A-01,HRD_40,Proliferative,Proliferative,HRD
+TCGA-24-2033-01A-01,non_HRD_41,Mesenchymal,Differentiated,non_HRD
+TCGA-24-2261-01A-01,non_HRD_42,Immunoreactive,Immunoreactive,non_HRD
+TCGA-24-2289-01A-01,HRD_43,Mesenchymal,Mesenchymal,HRD
+TCGA-24-2290-01A-01,HRD_44,Immunoreactive,Immunoreactive,HRD
+TCGA-25-1312-01A-01,HRD_45,Proliferative,Proliferative,HRD
+TCGA-25-1313-01A-01,non_HRD_46,Immunoreactive,Differentiated,non_HRD
+TCGA-25-1318-01A-01,HRD_47,Differentiated,Differentiated,HRD
+TCGA-25-1322-01A-01,HRD_48,Immunoreactive,Differentiated,HRD
+TCGA-25-1323-01A-01,non_HRD_49,Proliferative,Stromal,non_HRD
+TCGA-25-1329-01A-01,non_HRD_50,Mesenchymal,Differentiated,non_HRD
+TCGA-25-1628-01A-01,non_HRD_51,Mesenchymal,Mesenchymal,non_HRD
+TCGA-25-1631-01A-01,non_HRD_52,Differentiated,Differentiated,non_HRD
+TCGA-25-2396-01A-01,non_HRD_53,Immunoreactive,Stromal,non_HRD
+TCGA-25-2397-01A-01,non_HRD_54,Differentiated,Differentiated,non_HRD
+TCGA-25-2399-01A-01,non_HRD_55,Mesenchymal,Immunoreactive,non_HRD
+TCGA-25-2404-01A-01,HRD_56,Mesenchymal,Stromal,HRD
+TCGA-25-2409-01A-01,non_HRD_57,Differentiated,Differentiated,non_HRD
+TCGA-29-1688-01A-01,HRD_58,Immunoreactive,Immunoreactive,HRD
+TCGA-29-1690-01A-01,HRD_59,Mesenchymal,Differentiated,HRD
+TCGA-29-1693-01A-01,HRD_60,Mesenchymal,Mesenchymal,HRD
+TCGA-29-1697-01A-01,HRD_61,Proliferative,Proliferative,HRD
+TCGA-29-1698-01A-01,HRD_62,Mesenchymal,Mesenchymal,HRD
+TCGA-29-1702-01A-01,HRD_63,Proliferative,Proliferative,HRD
+TCGA-29-1705-01A-01,HRD_64,Mesenchymal,Mesenchymal,HRD
+TCGA-29-1710-01A-02,HRD_65,Immunoreactive,Mesenchymal,HRD
+TCGA-29-1711-01A-01,HRD_66,Immunoreactive,Differentiated,HRD
+TCGA-29-1762-01A-01,HRD_67,Proliferative,Proliferative,HRD
+TCGA-29-1763-01A-02,HRD_68,Proliferative,Differentiated,HRD
+TCGA-29-1766-01A-01,HRD_69,Mesenchymal,Mesenchymal,HRD
+TCGA-29-1769-01A-01,HRD_70,Immunoreactive,Immunoreactive,HRD
+TCGA-29-1771-01A-01,HRD_71,Differentiated,Differentiated,HRD
+TCGA-29-1785-01A-01,HRD_72,Immunoreactive,Mesenchymal,HRD
+TCGA-29-2427-01A-01,HRD_73,Immunoreactive,Immunoreactive,HRD
+TCGA-30-1887-01A-01,non_HRD_74,Immunoreactive,Mesenchymal,non_HRD
+TCGA-30-1891-01A-01,HRD_75,Mesenchymal,Mesenchymal,HRD
+TCGA-36-1569-01A-01,non_HRD_76,Mesenchymal,Differentiated,non_HRD
+TCGA-36-1570-01A-01,HRD_77,Differentiated,Differentiated,HRD
+TCGA-36-1571-01A-01,non_HRD_78,Proliferative,Proliferative,non_HRD
+TCGA-36-1577-01A-01,non_HRD_79,Proliferative,Stromal,non_HRD
+TCGA-36-1578-01A-01,non_HRD_80,Immunoreactive,Immunoreactive,non_HRD
+TCGA-36-1580-01A-01,non_HRD_81,Mesenchymal,Mesenchymal,non_HRD
+TCGA-36-2530-01A-01,HRD_82,Data not available,Immunoreactive,HRD
+TCGA-36-2532-01A-01,HRD_83,Data not available,Immunoreactive,HRD
+TCGA-36-2537-01A-01,HRD_84,Data not available,Differentiated,HRD
+TCGA-36-2542-01A-01,HRD_85,Data not available,Differentiated,HRD
+TCGA-36-2544-01A-01,HRD_86,Data not available,Differentiated,HRD
+TCGA-36-2545-01A-01,HRD_87,Data not available,Immunoreactive,HRD
+TCGA-36-2547-01A-01,HRD_88,Data not available,Proliferative,HRD
+TCGA-36-2549-01A-01,non_HRD_89,Data not available,Differentiated,non_HRD
+TCGA-59-2352-01A-01,non_HRD_90,Proliferative,Differentiated,non_HRD
+TCGA-59-2372-01A-01,HRD_91,Data not available,Proliferative,HRD
+TCGA-61-1724-01A-01,non_HRD_92,Differentiated,Differentiated,non_HRD
+TCGA-61-1727-01A-01,HRD_93,Data not available,Immunoreactive,HRD
+TCGA-61-1741-01A-02,HRD_94,Proliferative,Proliferative,HRD
+TCGA-61-1907-01A-01,HRD_95,Immunoreactive,Immunoreactive,HRD
+TCGA-61-1910-01A-01,HRD_96,Differentiated,Proliferative,HRD
+TCGA-61-1911-01A-01,HRD_97,Immunoreactive,Differentiated,HRD
+TCGA-61-1915-01A-01,HRD_98,Immunoreactive,Immunoreactive,HRD
+TCGA-61-1918-01A-01,non_HRD_99,Differentiated,Differentiated,non_HRD
+TCGA-61-1995-01A-01,non_HRD_100,Immunoreactive,Immunoreactive,non_HRD
+TCGA-61-2008-01A-02,HRD_101,Differentiated,Differentiated,HRD
+TCGA-61-2094-01A-01,HRD_102,Immunoreactive,Immunoreactive,HRD
+TCGA-61-2613-01A-01,HRD_103,Data not available,Stromal,HRD

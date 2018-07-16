@@ -1,0 +1,104 @@
+rowname,bcr_patient_barcode,age_at_diagnosis,tumor_stage,tumor_grade,tumor_residual_disease,vital_status,daystodeath_or_LFU,Prog_or_Recur,daystotumorprog-recur-LFU,PlatinumStatus,PlatinumFreeInterval (mos),ethnicity,race,year_of_diagnosis,Condition,BioReplicate,mRNA_subtype
+HRD_1,TCGA-09-1664,37,IIIC,G1,1-10 mm,DECEASED,2278,Unknown,Not available,Not available,,NOT HISPANIC OR LATINO,WHITE,2002,HRD,1,Data not available
+non_HRD_2,TCGA-13-1404,48,IIIC,G3,1-10 mm,LIVING,2211,Yes,1581,Sensitive,43.5,NOT HISPANIC OR LATINO,WHITE,2008,non_HRD,2,Proliferative
+non_HRD_3,TCGA-13-1409,73,IIIC,G3,1-10 mm,DECEASED,1703,Yes,737,Sensitive,17.53,NOT HISPANIC OR LATINO,WHITE,2008,non_HRD,3,Proliferative
+non_HRD_4,TCGA-13-1410,57,IV,G3,Not available,LIVING,2168,Yes,319,Sensitive,6.37,NOT HISPANIC OR LATINO,WHITE,2008,non_HRD,4,Immunoreactive
+HRD_5,TCGA-13-1482,52,IV,G2,>20 mm,DECEASED,1877,Yes,602,Sensitive,14.8,NOT HISPANIC OR LATINO,WHITE,2000,HRD,5,Differentiated
+HRD_6,TCGA-13-1483,61,IIIC,G3,>20 mm,DECEASED,894,Yes,296,Resistant,1.9,NOT HISPANIC OR LATINO,WHITE,2000,HRD,6,Mesenchymal
+non_HRD_7,TCGA-13-1485,48,IV,G2,1-10 mm,DECEASED,629,Yes,170,Resistant,0.7,NOT HISPANIC OR LATINO,WHITE,2001,non_HRD,7,Mesenchymal
+non_HRD_8,TCGA-13-1487,74,IV,G3,Not available,DECEASED,681,Yes,412,Sensitive,6.7,NOT HISPANIC OR LATINO,WHITE,2002,non_HRD,8,Mesenchymal
+HRD_9,TCGA-13-1488,59,IV,G3,11-20 mm,DECEASED,2154,Yes,351,Sensitive,6,NOT HISPANIC OR LATINO,WHITE,2002,HRD,9,Immunoreactive
+HRD_10,TCGA-13-1489,70,IIIC,G2,Not available,DECEASED,2553,Yes,806,Sensitive,17.5,NOT HISPANIC OR LATINO,WHITE,2002,HRD,10,Proliferative
+HRD_11,TCGA-13-1492,66,IIIC,G3,Not available,DECEASED,3805,No,3805,Sensitive,117.67,NOT HISPANIC OR LATINO,WHITE,2002,HRD,11,Proliferative
+HRD_12,TCGA-13-1497,48,IIIC,G3,Not available,LIVING,3636,Yes,813,Sensitive,20.6,NOT HISPANIC OR LATINO,WHITE,2004,HRD,12,Proliferative
+non_HRD_13,TCGA-13-1500,71,IIIC,G3,11-20 mm,DECEASED,425,Yes,253,Resistant,1,NOT HISPANIC OR LATINO,WHITE,2006,non_HRD,13,Differentiated
+HRD_14,TCGA-13-1501,50,IV,G3,>20 mm,DECEASED,1278,Yes,392,Sensitive,6.9,NOT HISPANIC OR LATINO,WHITE,2006,HRD,14,Mesenchymal
+non_HRD_15,TCGA-13-1507,77,IIIC,G3,1-10 mm,DECEASED,1993,Yes,324,Resistant,5.47,NOT HISPANIC OR LATINO,WHITE,2008,non_HRD,15,Immunoreactive
+non_HRD_16,TCGA-13-1511,52,IV,G3,>20 mm,DECEASED,1646,Yes,455,Sensitive,8.97,NOT HISPANIC OR LATINO,ASIAN,2008,non_HRD,16,Differentiated
+non_HRD_17,TCGA-13-2059,50,IIIC,G3,1-10 mm,LIVING,2043,Yes,1005,Sensitive,28.23,NOT HISPANIC OR LATINO,WHITE,2009,non_HRD,17,Data not available
+non_HRD_18,TCGA-13-2060,51,IV,G3,1-10 mm,LIVING,2021,Yes,1475,Sensitive,44.29,[Not Available],WHITE,2009,non_HRD,18,Immunoreactive
+non_HRD_19,TCGA-13-2061,59,IIIC,G3,No Macroscopic disease,LIVING,1981,No,1981,Sensitive,60.43,NOT HISPANIC OR LATINO,WHITE,2009,non_HRD,19,Data not available
+non_HRD_20,TCGA-13-2065,71,IIIC,G3,1-10 mm,LIVING,1979,Yes,946,Sensitive,26.83,[Not Available],BLACK OR AFRICAN AMERICAN,2009,non_HRD,20,Data not available
+non_HRD_21,TCGA-13-2066,49,IV,G3,1-10 mm,LIVING,1979,Yes,1028,Sensitive,28.63,HISPANIC OR LATINO,WHITE,2009,non_HRD,21,Data not available
+non_HRD_22,TCGA-23-1121,52,IIIC,G3,>20 mm,LIVING,2300,No,2300,Sensitive,70.3,NOT HISPANIC OR LATINO,[Not Available],2008,non_HRD,22,Proliferative
+HRD_23,TCGA-23-1122,53,IIIC,G3,1-10 mm,DECEASED,1189,Yes,447,Sensitive,6.7,[Not Available],WHITE,1998,HRD,23,Proliferative
+HRD_24,TCGA-24-1103,50,IIIC,G3,1-10 mm,DECEASED,1645,Yes,677,Sensitive,17.96,[Not Applicable],BLACK OR AFRICAN AMERICAN,2001,HRD,24,Differentiated
+non_HRD_25,TCGA-24-1416,34,IV,G3,1-10 mm,LIVING,808,Yes,320,Resistant,5,[Not Available],WHITE,2008,non_HRD,25,Differentiated
+non_HRD_26,TCGA-24-1422,82,IIIC,G3,1-10 mm,DECEASED,23,Unknown,Not available,Not available,,[Not Available],BLACK OR AFRICAN AMERICAN,2008,non_HRD,26,Mesenchymal
+non_HRD_27,TCGA-24-1430,68,IIIC,G3,>20 mm,DECEASED,862,Yes,448,Sensitive,11.2,[Not Available],WHITE,2000,non_HRD,27,Proliferative
+non_HRD_28,TCGA-24-1431,67,IIIC,G3,1-10 mm,DECEASED,583,Yes,199,Resistant,1.7,[Not Available],WHITE,1999,non_HRD,28,Differentiated
+HRD_29,TCGA-24-1435,57,IIIC,G3,1-10 mm,DECEASED,1324,Yes,505,Sensitive,11.7,[Not Available],WHITE,1999,HRD,29,Immunoreactive
+non_HRD_30,TCGA-24-1436,57,IIIC,G3,1-10 mm,DECEASED,260,Yes,Not available,Not available,,[Not Available],WHITE,1999,non_HRD,30,Immunoreactive
+non_HRD_31,TCGA-24-1548,57,IIIC,G3,1-10 mm,DECEASED,493,Yes,207,Resistant,2.8,[Not Available],WHITE,1997,non_HRD,31,Proliferative
+HRD_32,TCGA-24-1553,53,IIIB,G3,1-10 mm,DECEASED,1767,Yes,553,Sensitive,13.1,[Not Available],WHITE,1997,HRD,32,Immunoreactive
+HRD_33,TCGA-24-1555,50,IIIC,G3,Not available,DECEASED,2692,Yes,1577,Not available,,[Not Available],WHITE,1997,HRD,33,Differentiated
+HRD_34,TCGA-24-1557,49,IIIC,G3,>20 mm,DECEASED,1213,Yes,447,Resistant,5.5,[Not Available],WHITE,2000,HRD,34,Differentiated
+non_HRD_35,TCGA-24-1558,73,IIIC,G3,1-10 mm,DECEASED,594,Yes,273,Resistant,0.8,[Not Available],WHITE,2000,non_HRD,35,Proliferative
+HRD_36,TCGA-24-1562,67,IIIC,G3,1-10 mm,DECEASED,1384,Yes,228,Resistant,2.5,[Not Available],WHITE,1999,HRD,36,Differentiated
+non_HRD_37,TCGA-24-1920,74,IIIC,G3,1-10 mm,LIVING,752,Yes,632,Sensitive,16.27,[Not Available],WHITE,2009,non_HRD,37,Proliferative
+non_HRD_38,TCGA-24-1927,59,IIIC,G3,1-10 mm,DECEASED,499,Yes,289,Resistant,5.23,[Not Available],WHITE,1999,non_HRD,38,Data not available
+HRD_39,TCGA-24-2024,72,IIIC,G3,1-10 mm,DECEASED,1769,Yes,421,Sensitive,9.8,[Not Available],BLACK OR AFRICAN AMERICAN,1994,HRD,39,Differentiated
+HRD_40,TCGA-24-2030,87,IIIC,G3,>20 mm,DECEASED,1701,Yes,646,Sensitive,16.95,[Not Available],WHITE,1995,HRD,40,Proliferative
+non_HRD_41,TCGA-24-2033,87,IIIC,G3,>20 mm,DECEASED,562,Yes,351,Resistant,3.77,[Not Available],WHITE,1995,non_HRD,41,Mesenchymal
+non_HRD_42,TCGA-24-2261,76,IIIC,G3,11-20 mm,DECEASED,24,Yes,Not available,Not available,,[Not Available],WHITE,1992,non_HRD,42,Immunoreactive
+HRD_43,TCGA-24-2289,69,IV,G3,>20 mm,DECEASED,2049,Yes,568,Sensitive,12.52,[Not Available],WHITE,1997,HRD,43,Mesenchymal
+HRD_44,TCGA-24-2290,56,IIIC,G3,1-10 mm,DECEASED,1102,Yes,324,Sensitive,6.66,[Not Available],WHITE,1997,HRD,44,Immunoreactive
+HRD_45,TCGA-25-1312,69,IV,G3,1-10 mm,DECEASED,31,Unknown,Not available,Not available,,NOT HISPANIC OR LATINO,WHITE,2001,HRD,45,Proliferative
+non_HRD_46,TCGA-25-1313,62,IV,G3,1-10 mm,DECEASED,819,Yes,394,Sensitive,8,NOT HISPANIC OR LATINO,WHITE,2000,non_HRD,46,Immunoreactive
+HRD_47,TCGA-25-1318,54,IIIC,G3,1-10 mm,DECEASED,1064,Yes,185,Resistant,2.1,NOT HISPANIC OR LATINO,WHITE,2000,HRD,47,Differentiated
+HRD_48,TCGA-25-1322,62,IV,G3,>20 mm,DECEASED,91,Yes,Not available,Not available,,NOT HISPANIC OR LATINO,WHITE,2001,HRD,48,Immunoreactive
+non_HRD_49,TCGA-25-1323,72,IIIC,G3,1-10 mm,DECEASED,395,Yes,365,Sensitive,7.9,NOT HISPANIC OR LATINO,WHITE,2001,non_HRD,49,Proliferative
+non_HRD_50,TCGA-25-1329,76,IIIC,G3,11-20 mm,DECEASED,457,Unknown,Not available,Not available,,NOT HISPANIC OR LATINO,WHITE,2002,non_HRD,50,Mesenchymal
+non_HRD_51,TCGA-25-1628,67,IIIC,G3,1-10 mm,DECEASED,626,Yes,286,Resistant,3.5,NOT HISPANIC OR LATINO,WHITE,2002,non_HRD,51,Mesenchymal
+non_HRD_52,TCGA-25-1631,73,IIIC,G3,1-10 mm,DECEASED,9,No,9,Not available,,NOT HISPANIC OR LATINO,WHITE,2002,non_HRD,52,Differentiated
+non_HRD_53,TCGA-25-2396,71,IIIC,G3,No Macroscopic disease,DECEASED,92,Unknown,Not available,Not available,,NOT HISPANIC OR LATINO,WHITE,2004,non_HRD,53,Immunoreactive
+non_HRD_54,TCGA-25-2397,59,IV,G3,No Macroscopic disease,DECEASED,365,Unknown,Not available,Not available,,NOT HISPANIC OR LATINO,WHITE,2004,non_HRD,54,Differentiated
+non_HRD_55,TCGA-25-2399,80,IIIC,G3,>20 mm,DECEASED,608,Yes,243,Resistant,1.9,NOT HISPANIC OR LATINO,WHITE,2004,non_HRD,55,Mesenchymal
+HRD_56,TCGA-25-2404,38,IIIC,G3,No Macroscopic disease,DECEASED,882,Yes,425,Sensitive,9.9,NOT HISPANIC OR LATINO,AMERICAN INDIAN OR ALASKA NATIVE,2005,HRD,56,Mesenchymal
+non_HRD_57,TCGA-25-2409,71,IV,G3,1-10 mm,DECEASED,820,Yes,303,Resistant,3.9,NOT HISPANIC OR LATINO,WHITE,2005,non_HRD,57,Differentiated
+HRD_58,TCGA-29-1688,39,IIIC,G2,Not available,DECEASED,2399,Yes,183,Not available,,[Not Available],WHITE,1992,HRD,58,Immunoreactive
+HRD_59,TCGA-29-1690,66,IIIC,G2,11-20 mm,DECEASED,1448,Yes,Not available,Not available,,[Not Available],WHITE,1993,HRD,59,Mesenchymal
+HRD_60,TCGA-29-1693,72,IIIC,G3,>20 mm,LIVING,3095,Yes,694,Sensitive,16.4,[Not Available],WHITE,2001,HRD,60,Mesenchymal
+HRD_61,TCGA-29-1697,62,IIIC,G3,>20 mm,DECEASED,948,Yes,499,Sensitive,10.4,[Not Available],WHITE,2003,HRD,61,Proliferative
+HRD_62,TCGA-29-1698,53,IIIC,G3,1-10 mm,LIVING,2077,Yes,180,Resistant,0,[Not Available],BLACK OR AFRICAN AMERICAN,2004,HRD,62,Mesenchymal
+HRD_63,TCGA-29-1702,84,IIIC,G3,1-10 mm,DECEASED,728,Yes,285,Resistant,2.9,[Not Available],WHITE,2005,HRD,63,Proliferative
+HRD_64,TCGA-29-1705,47,IIIC,G2,>20 mm,DECEASED,555,Yes,283,Resistant,3.71,[Not Available],WHITE,2005,HRD,64,Mesenchymal
+HRD_65,TCGA-29-1710,54,IIIC,G2,1-10 mm,DECEASED,951,Yes,315,Sensitive,8.77,[Not Available],WHITE,2006,HRD,65,Immunoreactive
+HRD_66,TCGA-29-1711,45,IIIC,G2,No Macroscopic disease,LIVING,1053,No,1053,Sensitive,30.1,[Not Available],BLACK OR AFRICAN AMERICAN,2006,HRD,66,Immunoreactive
+HRD_67,TCGA-29-1762,59,IV,G2,>20 mm,DECEASED,2634,Yes,1374,Sensitive,40.6,[Not Available],WHITE,1998,HRD,67,Proliferative
+HRD_68,TCGA-29-1763,43,IIC,G2,1-10 mm,LIVING,2031,Yes,428,Sensitive,10.8,[Not Available],BLACK OR AFRICAN AMERICAN,2004,HRD,68,Proliferative
+HRD_69,TCGA-29-1766,74,IIIC,G2,11-20 mm,DECEASED,1198,Yes,672,Sensitive,15.9,[Not Available],WHITE,2006,HRD,69,Mesenchymal
+HRD_70,TCGA-29-1769,40,IIIC,G3,1-10 mm,LIVING,699,No,699,Sensitive,18,[Not Available],WHITE,2007,HRD,70,Immunoreactive
+HRD_71,TCGA-29-1771,76,IIIC,G2,>20 mm,LIVING,685,Yes,594,Sensitive,14.9,[Not Available],WHITE,2007,HRD,71,Differentiated
+HRD_72,TCGA-29-1785,55,IIIC,G3,>20 mm,DECEASED,1104,Yes,473,Sensitive,10.4,[Not Available],WHITE,2006,HRD,72,Immunoreactive
+HRD_73,TCGA-29-2427,60,IIIC,G3,>20 mm,LIVING,1900,Yes,1581,Not available,,[Not Available],WHITE,2004,HRD,73,Immunoreactive
+non_HRD_74,TCGA-30-1887,67,IIIC,G2,1-10 mm,DECEASED,738,Yes,Not available,Not available,,NOT HISPANIC OR LATINO,WHITE,2005,non_HRD,74,Immunoreactive
+HRD_75,TCGA-30-1891,61,IIIC,G2,1-10 mm,DECEASED,914,Yes,181,Resistant,1.3,NOT HISPANIC OR LATINO,WHITE,2004,HRD,75,Mesenchymal
+non_HRD_76,TCGA-36-1569,52,IIIC,G3,1-10 mm,LIVING,884,Unknown,Not available,Not available,,[Not Available],WHITE,2007,non_HRD,76,Mesenchymal
+HRD_77,TCGA-36-1570,49,IIIC,G3,>20 mm,LIVING,655,Yes,375,Sensitive,8,[Not Available],WHITE,2007,HRD,77,Differentiated
+non_HRD_78,TCGA-36-1571,53,IIIB,G3,No Macroscopic disease,DECEASED,695,Yes,374,Sensitive,6.6,[Not Available],WHITE,2007,non_HRD,78,Proliferative
+non_HRD_79,TCGA-36-1577,43,IIC,G2,No Macroscopic disease,LIVING,783,No,783,Sensitive,23.3,[Not Available],ASIAN,2007,non_HRD,79,Proliferative
+non_HRD_80,TCGA-36-1578,63,IV,G3,>20 mm,LIVING,847,Yes,310,Resistant,3.1,NOT HISPANIC OR LATINO,ASIAN,2007,non_HRD,80,Immunoreactive
+non_HRD_81,TCGA-36-1580,82,IIIC,G3,>20 mm,DECEASED,737,Yes,440,Resistant,3,[Not Available],[Not Available],2007,non_HRD,81,Mesenchymal
+HRD_82,TCGA-36-2530,38,IIIC,G3,11-20 mm,LIVING,1004,Yes,630,Sensitive,16.5,NOT HISPANIC OR LATINO,ASIAN,2007,HRD,82,Data not available
+HRD_83,TCGA-36-2532,61,IIIC,G3,No Macroscopic disease,LIVING,897,Yes,Not available,Not available,,[Not Available],[Not Available],2007,HRD,83,Data not available
+HRD_84,TCGA-36-2537,39,IIIC,G3,>20 mm,LIVING,788,Yes,431,Sensitive,10.2,[Not Available],[Not Available],2008,HRD,84,Data not available
+HRD_85,TCGA-36-2542,59,IIIB,G3,1-10 mm,LIVING,657,No,657,Sensitive,16.83,NOT HISPANIC OR LATINO,ASIAN,2008,HRD,85,Data not available
+HRD_86,TCGA-36-2544,58,IIIC,G3,>20 mm,LIVING,638,Yes,325,Sensitive,6.57,[Not Available],[Not Available],2008,HRD,86,Data not available
+HRD_87,TCGA-36-2545,42,IIIA,G3,No Macroscopic disease,LIVING,557,No,557,Sensitive,13.73,[Not Available],[Not Available],2008,HRD,87,Data not available
+HRD_88,TCGA-36-2547,64,IIIC,G3,No Macroscopic disease,LIVING,624,Unknown,Not available,Not available,,[Not Available],[Not Available],2008,HRD,88,Data not available
+non_HRD_89,TCGA-36-2549,54,IIC,G3,No Macroscopic disease,LIVING,184,No,184,Not available,,[Not Available],[Not Available],2008,non_HRD,89,Data not available
+non_HRD_90,TCGA-59-2352,78,IIIC,G3,Not available,DECEASED,286,Yes,Not available,Not available,,NOT HISPANIC OR LATINO,WHITE,2002,non_HRD,90,Proliferative
+HRD_91,TCGA-59-2372,74,IIIC,G2,No Macroscopic disease,DECEASED,1362,Unknown,Not available,Not available,,NOT HISPANIC OR LATINO,WHITE,2005,HRD,91,Data not available
+non_HRD_92,TCGA-61-1724,47,IIIC,G3,No Macroscopic disease,DECEASED,637,Yes,Not available,Not available,,NOT HISPANIC OR LATINO,WHITE,2007,non_HRD,92,Differentiated
+HRD_93,TCGA-61-1727,74,IC,G3,No Macroscopic disease,LIVING,564,No,564,Sensitive,13.7,NOT HISPANIC OR LATINO,WHITE,2007,HRD,93,Data not available
+HRD_94,TCGA-61-1741,76,IIIB,G3,>20 mm,DECEASED,1024,Yes,487,Sensitive,10.1,NOT HISPANIC OR LATINO,WHITE,2004,HRD,94,Proliferative
+HRD_95,TCGA-61-1907,63,IIIC,G3,11-20 mm,LIVING,952,Yes,743,Sensitive,19.1,NOT HISPANIC OR LATINO,WHITE,2006,HRD,95,Immunoreactive
+HRD_96,TCGA-61-1910,56,IIC,G3,1-10 mm,LIVING,1126,No,1126,Sensitive,31.7,NOT HISPANIC OR LATINO,WHITE,2006,HRD,96,Differentiated
+HRD_97,TCGA-61-1911,55,IIA,G3,Not available,LIVING,1292,Yes,843,Sensitive,23,NOT HISPANIC OR LATINO,WHITE,2005,HRD,97,Immunoreactive
+HRD_98,TCGA-61-1915,50,IIC,G3,Not available,LIVING,2060,No,2060,Sensitive,63,[Not Available],WHITE,2003,HRD,98,Immunoreactive
+non_HRD_99,TCGA-61-1918,45,IV,G3,No Macroscopic disease,DECEASED,479,Yes,413,Sensitive,8.7,NOT HISPANIC OR LATINO,WHITE,2002,non_HRD,99,Differentiated
+non_HRD_100,TCGA-61-1995,43,IIIC,G3,1-10 mm,LIVING,60,Yes,Not available,Not available,,NOT HISPANIC OR LATINO,WHITE,2009,non_HRD,100,Immunoreactive
+HRD_101,TCGA-61-2008,40,IIC,G2,No Macroscopic disease,LIVING,931,Yes,817,Sensitive,22,NOT HISPANIC OR LATINO,ASIAN,2007,HRD,101,Differentiated
+HRD_102,TCGA-61-2094,63,IIIC,G3,Not available,LIVING,2182,No,2182,Sensitive,66.2,NOT HISPANIC OR LATINO,WHITE,2003,HRD,102,Immunoreactive
+HRD_103,TCGA-61-2613,73,IIIC,G3,11-20 mm,DECEASED,945,Yes,358,Not available,,[Not Available],WHITE,1998,HRD,103,Data not available
