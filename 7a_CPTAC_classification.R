@@ -123,6 +123,8 @@ save(DDA_overlap, DDA_missing0, DDA_z, CPTAC_DDA_cluster_final, file='DDA_classi
 save(SWATH_overlap, SWATH_z, SWATH_imputed, SWATH_filtered, CPTAC_SWATH_cluster_final,  file='SWATH_classification_workflow_20171101.Rdata')
 save(classification_result, file='classification_result_20171101.Rdata')
 
+## Step 5: Calculate Adjusted Rand Index (Figure 3B)
+
 #ARI of results from common proteins
 adjustedRandIndex(classification_result$DDA_class, classification_result$SWATH_class)
 [1] 0.2146062
@@ -183,9 +185,8 @@ clinical_DDA_anno <- new('AnnotatedDataFrame', data=clinical_DDA)
 CPTAC_DDA_Set <- new('MSnSet', exprs=DDA_overlap, phenoData=clinical_DDA_anno)
 
 
-save(CPTAC_SWATH_Set, file='CPTAC_SWATH_final_Set_20171101.Rdata')
-save(CPTAC_DDA_Set, file='CPTAC_DDA_final_Set_20171101.Rdata')
+save(CPTAC_SWATH_Set, file='CPTAC_SWATH_Set.Rdata')
+save(CPTAC_DDA_Set, file='CPTAC_DDA_Set.Rdata')
 
-#save(clinical_DDA, clinical_SWATH, file='clinical_annotation_tables_20161101.Rdata')
 
 
