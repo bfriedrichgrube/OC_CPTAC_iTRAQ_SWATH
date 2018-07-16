@@ -1,4 +1,4 @@
-## Differential expression analysis of 103 HGS-OC samples with diffferent HRD status (Figure 6A)
+## Differential expression analysis of 103 HGS-OC samples with diffferent HRD status (Figure 7A)
 
 ## After mapDIA ##
 
