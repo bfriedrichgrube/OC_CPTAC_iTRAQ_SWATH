@@ -61,8 +61,13 @@ F) Bootstrapping algorithm for classification stability and mesenchymal stabilit
 
 G) Differential expression analysis of previously identified molecular subgroups
     SCRIPT: 7e_CPTAC_class_comparison.R
-    INPUT:  
-    OUTPUT:
+    INPUT:  CPTAC_DDA_WGCNA.Rdata
+            CPTAC_SWATH_WGCNA.Rdata
+            SWATH_iTRAQ_correlations.Rdata
+            CPTAC_SWATH_imputed.Rdata
+            CPTAC_DDA_protein_level_CDAP.Rdata
+    OUTPUT: Figure 5
+            Figure 6
     
 H) Analysis of HRD vs. non-HRD subgroups
     SCRIPT: 8_
