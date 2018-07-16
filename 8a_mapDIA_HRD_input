@@ -1,7 +1,7 @@
 #lines can be commented using hash
 
 ###input file
-FILE =/home/betty/Documents/Biomarker_Cancer/Ovarian_JohnHopkins/CPTAC_SWATH2stats_preprocessing/CPTAC_SWATH2stats_2stepfiltering_final/103files_newlib_jumbo_20170207_preprocess/CPTAC_103HRD_jumbo_mapDIA_input_norm_batchcorr_20170208.tsv
+FILE =mapDIA_input_norm_batchcorr.tsv
 LOG2_TRANSFORMATION =false
 
 ### Experimental design
