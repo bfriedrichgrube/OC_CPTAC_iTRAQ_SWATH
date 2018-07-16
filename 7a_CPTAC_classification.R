@@ -119,9 +119,8 @@ rownames(classification_result) <- classification_result[,1]
 classification_result <- classification_result[sort(rownames(classification_result)),]
 head(classification_result)
 
-save(DDA_overlap, DDA_missing0, DDA_z, CPTAC_DDA_cluster_final, file='DDA_classification_workflow_20171101.Rdata')
-save(SWATH_overlap, SWATH_z, SWATH_imputed, SWATH_filtered, CPTAC_SWATH_cluster_final,  file='SWATH_classification_workflow_20171101.Rdata')
-save(classification_result, file='classification_result_20171101.Rdata')
+save(DDA_z, CPTAC_DDA_cluster_final, file='DDA_classification_workflow.Rdata')
+save(SWATH_z, CPTAC_SWATH_cluster_final,  file='SWATH_classification_workflow.Rdata')
 
 ## Step 5: Calculate Adjusted Rand Index (Figure 3B)
 
