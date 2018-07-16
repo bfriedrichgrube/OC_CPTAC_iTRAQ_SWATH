@@ -62,7 +62,8 @@ length(b)
 [1] 1599
 max(b)
 which(b==max(b))
-
+                         
+save(b, file="SWATH_iTRAQ_correlations.Rdata")
 
 pdf('SWATH_iTRAQ_correlation.pdf', width=10, height=10)
 par(cex.axis=2.5, las=1)
