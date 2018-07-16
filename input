@@ -1,0 +1,36 @@
+#lines can be commented using hash
+
+###input file
+FILE =/home/betty/Documents/Biomarker_Cancer/Ovarian_JohnHopkins/CPTAC_SWATH2stats_preprocessing/CPTAC_SWATH2stats_2stepfiltering_final/103files_newlib_jumbo_20170207_preprocess/CPTAC_103HRD_jumbo_mapDIA_input_norm_batchcorr_20170208.tsv
+LOG2_TRANSFORMATION =false
+
+### Experimental design
+EXPERIMENTAL_DESIGN= IndependentDesign
+
+### Filter
+SDF= 2
+MIN_CORREL= 0.2
+MIN_OBS = 2 2   #if using independent design
+MIN_FRAG_PER_PEP = 3
+MAX_FRAG_PER_PEP = 6
+MIN_PEP_PER_PROT = 2
+
+
+### Sample information
+LABELS=HRD non_HRD
+SIZE=58 45   #if using independent design
+
+
+### min. max. DE
+MIN_DE= .01
+MAX_DE =.99
+
+
+### Contrast matrix for group comparison
+CONTRAST=
+- 1
+0 - 
+
+
+### protein_level.txt
+MAX_PEP_PER_PROT = 3
