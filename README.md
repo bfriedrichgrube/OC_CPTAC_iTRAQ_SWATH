@@ -70,6 +70,6 @@ G) Differential expression analysis of previously identified molecular subgroups
             Figure 6
     
 H) Analysis of HRD vs. non-HRD subgroups
-    SCRIPT: 8_
-    INPUT:
-    OUTPUT:
+    SCRIPT: 8a_mapDIA_HRD_input 8b_HRD_Volcano.R 8c_HRD_network_smoothing.R
+    INPUT:  mapDIA_input_norm_batchcorr.tsv
+    OUTPUT: Figure 7
