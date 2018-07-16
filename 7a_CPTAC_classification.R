@@ -121,6 +121,7 @@ head(classification_result)
 
 save(DDA_z, CPTAC_DDA_cluster_final, file='DDA_classification_workflow.Rdata')
 save(SWATH_z, CPTAC_SWATH_cluster_final,  file='SWATH_classification_workflow.Rdata')
+save(classification_result, file='classification_result.Rdata')
 
 ## Step 5: Calculate Adjusted Rand Index (Figure 3B)
 
