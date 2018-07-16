@@ -33,7 +33,7 @@ D) Analyze SWATH data and iTRAQ data for technical details like peptide and prot
             Figure 2A-C
             CPTAC_SWATH_overlap.Rdata contains matrix with common proteins SWATH_overlap
             CPTAC_DDA_overlap.Rdata contains matrix with common proteins DDA_overlap
-            
+            SWATH_iTRAQ_correlations.Rdata
             
 E) Comparison of molecular subtype classification
     SCRIPT: 7a_CPTAC_Classification.R 7b_CPTAC_WGCNA.R 7c_CPTAC_heatmap.R
