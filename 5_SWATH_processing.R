@@ -140,6 +140,8 @@ data_hist <- hist(SWATH_filtered)
 back_hist <- hist(background)
 plot(data_hist, xlim=c(-8,8), col='lightblue', main='Distribution of data and distribution of background', xlab='log2 intensities')
 plot(back_hist, xlim=c(-8,8), col='red', main='Distribution of data and distribution of background', xlab='log2 intensities', add=T)
+
+#insert imputed values
 SWATH_imputed <- SWATH_filtered
 length(which(is.na(SWATH_imputed)))
 [1] 21914
